@@ -67,9 +67,11 @@ To implement the proposed method, we have considered Python using Keras package 
 ##  Fig 3:Average  Precision  score  Micro-averaged  over  allclasses for each of the 3 classifiers and the ensemble method<a name="fig3"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/PR_curve.png" width="350">
+
 ##  Fig 4:Multi-labelled Precision Recall curve of the proposed ensemble method<a name="fig4"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/PR_multiclass.PNG" width="350">
+
 ##  Fig 5:Confusion Matrix of the proposed method<a name="fig5"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/confusion_matrix.PNG" width="350">
