@@ -43,7 +43,7 @@ We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhanka
 ### Table 1: Dataset Description<a name="tab1"></a>
 
 | Dataset| COVID-19 |Pneumonia | Normal |
-| ------------- | ------------- | ------------- | 
+| ------------- | ------------- | ------------- | -------------|
 | [COVID Chestxray set](https://github.com/ieee8023/covid-chestxray-dataset) | 521 |239|218|
 | [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) | 219 |1341|1345|
 | [Actualmed COVID chestxray dataset](https://github.com/agchung/Actualmed-COVID-chestxray-dataset)| 12 |0|80|
