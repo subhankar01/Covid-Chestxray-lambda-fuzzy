@@ -31,11 +31,11 @@ In the present work, we have proposed a lambda fuzzy based ensemble model of DCN
 
 ## Fig 1:<a name="8"></a>
 
-<img src="https://github.com/subhankar01/Breast-Cancer-Histology-Classification-using-deep-learning-and-Fuzzy-Ensembling/blob/main/assets/VGG19.png" width="750">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/VGG16.png" width="750">
 
 ## Fig 2:Flowchart of the proposed method<a name="9"></a>
 
-<img src="https://github.com/subhankar01/Breast-Cancer-Histology-Classification-using-deep-learning-and-Fuzzy-Ensembling/blob/main/assets/Method%20Flowchart.png" width="500">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/Covid-19%20flowchart.png" width="500">
 
 ## Dataset<a name="4"></a>
 We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhankar01/Novel-COVID-19-Chestxray-Database) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx datasset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  is provided  in [Table 1](#tab1)
