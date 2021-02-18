@@ -41,6 +41,7 @@ In the present work, we have proposed a lambda fuzzy based ensemble model of DCN
 We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhankar01/Novel-COVID-19-Chestxray-Database) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx datasset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  isprovided  in [Table 1](#tab1)
 
 ### Table 1: Dataset Description<a name="tab1"></a>
+
 | Dataset| COVID-19 |Pneumonia | Normal |
 | ------------- | ------------- | ------------- | 
 | [COVID Chestxray set](https://github.com/ieee8023/covid-chestxray-dataset) | 521 |239|218|
