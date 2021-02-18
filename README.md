@@ -38,7 +38,7 @@ In the present work, we have proposed a lambda fuzzy based ensemble model of DCN
 <img src="https://github.com/subhankar01/Breast-Cancer-Histology-Classification-using-deep-learning-and-Fuzzy-Ensembling/blob/main/assets/Method%20Flowchart.png" width="500">
 
 ## Dataset<a name="4"></a>
-We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhankar01/Novel-COVID-19-Chestxray-Database) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx datasset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  isprovided  in [Table 1](#tab1)
+We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhankar01/Novel-COVID-19-Chestxray-Database) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx datasset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  is provided  in [Table 1](#tab1)
 
 ### Table 1: Dataset Description<a name="tab1"></a>
 
@@ -51,23 +51,16 @@ We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhanka
 
 
 ## Results<a name="5"></a>
-
-Our experiment is implemented in Python using Keras package with Tensorflow as the deep learning framework backend and run on Google Colaboratoryhaving the following system specifications: Nvidia Tesla T4 with 13 GB GPUmemory,1.59GHz GPU Memory Clock and 12.72 GB RAM.In our method, we have first trained the five classification models and recordedtheir validation and test accuracies. The validation accuracies have been usedfor determining the weights as mentioned before.Our method has been used for both the 2-class and the 4-class classificationproblems of the breast cancer histology images.  [Table 2](#11) records the 2-classvalidation and test accuracies for each classifier, and the 2-class test accuracy ofthe ensemble method. [Table 3](#12) records the 4-class test and validation accuracies of each classifier, and the 4-class test accuracy of the ensemble method.
-
+To implement the proposed method, we have considered Python using Keras package with Tensorflow used as the deep learning framework backend and run on Google Colaboratory having the following system specifications: Nvidia Tesla T4 with 13 GB GPU memory, 1.59GHz GPU Memory Clock and 12.72 GB RAM.We have performed 3-class classification of the CXR images which are COVID-19 affected lungs, Pneumonia affected lungs and Normal lungs. We have used three pretrained models, namely, VGG16, Xception and InceptionV3, and then ensembled the decision of the three models using Choquet Integral. The fuzzy measures are calculated using Coalition game theory and Lambda fuzzy approximation. The parameters used for training the deep learning models are as follows. Adam optimizer, with a learning rate of 0.001 and hyperparameters beta_1 and beta_2 set equal to 0.6 and 0.8 respectively, are used for training the MLP classifier using the extracted image descriptors. The learning rate and hyperparameter values are experimentally inferred to be the most optimal values obtained using Grid search technique for model tuning and optimization. The batch size is set to 32, and the models are trained for 1000 epochs. Weights are initialized from the weights obtained by training ImageNet dataset for all DCNNs.In [Table 2](#tab2), we have recorded the validation accuracy, test accuracy, precision and recall of each of the three models, and the final results obtained after applying the ensemble method.
 
 
-
-
-
-### Table 3: Results of 4-class classification<a name="12"></a>
-| Classifier/Ensemble | Validation Accuracy |Test Accuracy |
-| ------------- | ------------- | ------------- | 
-| VGG16  | 97  |86|
-| VGG19  | 98  |83|
-| Xception| 99 | 91|
-| Inception V3|99|90|
-| InceptionResnetV2| 99| 91|
-|**Ensemble**|**-**|**95**|
+### Table 2: Results of 3-class classification<a name="tab2"></a>
+| Classifier/Ensemble | Validation Accuracy(in %) |Test Accuracy(in %) |Precision(Avg)|Recall(Avg)|
+| ------------- | ------------- | ------------- | -------------|-------------|
+| VGG16  | 92.5 |95|0.95|0.95|
+| Xception|89|92.5|0.93|0.92|
+| Inception V3|87|92.5|0.93|0.92|
+|**Ensemble**|**-**|**96.67**|**0.97**|**0.97**|
 
 ## Dependencies<a name="6"></a>
 - [Python3](https://www.python.org/)
