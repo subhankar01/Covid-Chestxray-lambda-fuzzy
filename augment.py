@@ -16,7 +16,7 @@ folder=['Covid','Pneumonia','Normal']
 for f in folder:
   parent_dir="train/"+f+"/"
   save_dir="aug/"+f+"/"
-  print(len(os.listdir(dir)))
+  print(len(os.listdir(parent_dir)))
   for filename in os.listdir(parent_dir):
     file=parent_dir+filename
     fname=filename.split('.')[0]
