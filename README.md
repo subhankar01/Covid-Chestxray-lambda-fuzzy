@@ -1,7 +1,7 @@
 # Covid-Chestxray-lambda-fuzzy
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/covid_poster.gif" width="1000" height="500" />
 
-Our solution for [Novel COVID-19 Chestxray Database](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-database)
+Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository)
 
 In this project, we have applied Choquet integral for ensemble of deep CNN models and propose a novel method for the evaluation of fuzzy measures using Coalition Game Theory, Information Theory and Lambda fuzzy approximation. Three different sets of Fuzzy Measures are calculated using three different weighting schemes along with information theory and coalition game theory. Using these three sets of fuzzy measures three Choquet Integrals are calculated and their decisions are finally combined.To the best of our knowledge,our experimental results outperform many state-of-the-art methods.
 
