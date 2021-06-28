@@ -124,17 +124,42 @@ predict_size_test = int(math.ceil(nb_test_samples / batch_size))
 model_name="VGG16"
 model = VGG16(include_top=False, weights="imagenet",pooling='avg',input_shape=input_shape)
 image_input =model.input
-x1= GlobalAveragePooling2D()(model.get_layer("block2_conv2").output)
-x2= GlobalAveragePooling2D()(model.get_layer("block3_conv3").output)
-x3 = GlobalAveragePooling2D()(model.get_layer("block4_conv3").output)  
-x4 = GlobalAveragePooling2D()(model.get_layer("block5_conv3").output)  
-out= Concatenate()([x1,x2,x3,x4])
-custom_vgg16_model = Model(image_input , out)
+
+x1= layers.GlobalAveragePooling2D()(model.get_layer("block2_conv2").output)
+x2= layers.GlobalAveragePooling2D()(model.get_layer("block3_conv3").output)
+x3 = layers.GlobalAveragePooling2D()(model.get_layer("block4_conv3").output)  
+x4 = layers.GlobalAveragePooling2D()(model.get_layer("block5_conv3").output)  
+out= layers.Concatenate()([x1,x2,x3,x4])
+out=layers.Dense(512,activation='relu')(out)
+out=layers.Dropout(0.5)(out)
+out=layers.Dense(3,activation='softmax',name= 'output')(out)
+custom_vgg16_model = models.Model(image_input , out)
 custom_vgg16_model.summary()
 
 for layer in custom_vgg16_model.layers[:15]:
     layer.trainable = False
 custom_vgg16_model.summary()
+
+nEpochs=1000
+base_lr=1e-3
+lr_min=0
+alpha=1
+def lr_scheduler(epoch):
+    lr = math.fabs(lr_min + (1 + math.cos(1 * epoch * math.pi /nEpochs)) * (base_lr - lr_min) / 2.)
+    print('lr: %f' % lr)
+    return lr
+
+contr_loss=tfa.losses.contrastive_loss
+
+opt = optimizers.Adam(lr=base_lr, beta_1=0.6, beta_2=0.8,amsgrad=True)
+custom_vgg16_model.compile(optimizer = opt, loss=['categorical_crossentropy',contr_loss], metrics=['accuracy'])
+checkpoint1 = callbacks.ModelCheckpoint('/content/drive/MyDrive/COVID/saved models/VGG16/vgg16model_weights.h5', monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
+lr_decay = callbacks.LearningRateScheduler(schedule=lr_scheduler)
+callbacks_list=[checkpoint1,lr_decay]
+history =custom_vgg16_model.fit(train_generator_vgg16,
+                    epochs=nEpochs,
+                    validation_data=val_generator_vgg16,
+                    callbacks=callbacks_list)
 
 #Saving features of the training images
 features_train = custom_vgg16_model.predict_generator(train_generator_vgg16, predict_size_train)
