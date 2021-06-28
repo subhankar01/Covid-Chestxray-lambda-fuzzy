@@ -115,16 +115,39 @@ model_name="Xception"
 model = Xception(include_top=False, weights="imagenet",pooling='avg',input_shape=input_shape)
 image_input =model.input
 x1 = GlobalAveragePooling2D()(model.get_layer("block4_sepconv1").output) #layer_27
-x2 = GlobalAveragePooling2D()(model.get_layer("block6_sepconv1").output) #layer 47
-x3=GlobalAveragePooling2D()(model.get_layer("block10_sepconv1").output) #layer_87
-x4 = GlobalAveragePooling2D()(model.get_layer("block14_sepconv1").output)  #layer_126
-out= Concatenate()([x1,x2,x3,x4])
+x2 = GlobalAveragePooling2D()(model.get_layer("block5_sepconv1").output) #layer 37
+x3 = GlobalAveragePooling2D()(model.get_layer("block14_sepconv1").output)  #layer_126
+out= Concatenate()([x1,x2,x3])
+out=layers.Dense(512,activation='relu')(out)
+out=layers.Dropout(0.5)(out)
+out=layers.Dense(3,activation='softmax',name= 'output')(out)
 custom_xcep_model = Model(image_input , out)
 custom_xcep_model.summary()
 
 for layer in custom_xcep_model.layers[:115]:
     layer.trainable = False
 custom_xcep_model.summary()
+
+nEpochs=1000
+base_lr=1e-3
+lr_min=0
+alpha=1
+def lr_scheduler(epoch):
+    lr = math.fabs(lr_min + (1 + math.cos(1 * epoch * math.pi /nEpochs)) * (base_lr - lr_min) / 2.)
+    print('lr: %f' % lr)
+    return lr
+
+contr_loss=tfa.losses.contrastive_loss
+opt = optimizers.Adam(lr=base_lr, beta_1=0.6, beta_2=0.8,amsgrad=True)
+custom_xcep_model.compile(optimizer = opt, loss=['categorical_crossentropy',contr_loss], metrics=['accuracy'])
+checkpoint1 = callbacks.ModelCheckpoint('/content/drive/MyDrive/COVID/saved models/Xception/xception_weights.h5', monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
+lr_decay = callbacks.LearningRateScheduler(schedule=lr_scheduler)
+callbacks_list=[checkpoint1,lr_decay]
+# Training the modified Xception network for refining the deep feature embedding
+history =custom_xcep_model.fit(train_generator_xcep,
+                    epochs=nEpochs,
+                    validation_data=val_generator_xcep,
+                    callbacks=callbacks_list)
 
 #Saving features of the training images
 features_train = custom_xcep_model.predict_generator(train_generator_xcep, predict_size_train)
