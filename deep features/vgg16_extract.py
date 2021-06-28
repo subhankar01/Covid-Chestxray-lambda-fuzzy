@@ -156,6 +156,7 @@ custom_vgg16_model.compile(optimizer = opt, loss=['categorical_crossentropy',con
 checkpoint1 = callbacks.ModelCheckpoint('/content/drive/MyDrive/COVID/saved models/VGG16/vgg16model_weights.h5', monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
 lr_decay = callbacks.LearningRateScheduler(schedule=lr_scheduler)
 callbacks_list=[checkpoint1,lr_decay]
+#training the modified VGG16 network for refining the deep feature embedding
 history =custom_vgg16_model.fit(train_generator_vgg16,
                     epochs=nEpochs,
                     validation_data=val_generator_vgg16,
