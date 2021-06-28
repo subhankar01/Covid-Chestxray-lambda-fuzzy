@@ -128,7 +128,7 @@ for layer in custom_xcep_model.layers[:115]:
     layer.trainable = False
 custom_xcep_model.summary()
 
-nEpochs=1000
+nEpochs=100
 base_lr=1e-3
 lr_min=0
 alpha=1
