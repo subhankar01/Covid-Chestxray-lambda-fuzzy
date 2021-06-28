@@ -140,7 +140,7 @@ for layer in custom_vgg16_model.layers[:15]:
     layer.trainable = False
 custom_vgg16_model.summary()
 
-nEpochs=1000
+nEpochs=100
 base_lr=1e-3
 lr_min=0
 alpha=1
