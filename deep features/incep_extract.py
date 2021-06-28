@@ -143,12 +143,37 @@ x11= GlobalAveragePooling2D()(model.get_layer("conv2d_80").output) #layer_249
 x12= GlobalAveragePooling2D()(model.get_layer("conv2d_76").output) #layer_263
 x13= GlobalAveragePooling2D()(model.get_layer("conv2d_85").output)#layer_294
 out= Concatenate()([x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13])
+out=layers.Dense(512,activation='relu')(out)
+out=layers.Dropout(0.5)(out)
+out=layers.Dense(3,activation='softmax',name= 'output')(out)
 custom_incep_model = Model(image_input , out)
 custom_incep_model.summary()
 
 for layer in custom_incep_model.layers[:249]:
     layer.trainable = False
 custom_incep_model.summary()
+
+nEpochs=100
+base_lr=1e-3
+lr_min=0
+alpha=1
+def lr_scheduler(epoch):
+    lr = math.fabs(lr_min + (1 + math.cos(1 * epoch * math.pi /nEpochs)) * (base_lr - lr_min) / 2.)
+    print('lr: %f' % lr)
+    return lr
+
+contr_loss=tfa.losses.contrastive_loss
+
+opt = optimizers.Adam(lr=base_lr, beta_1=0.6, beta_2=0.8,amsgrad=True)
+custom_incep_model.compile(optimizer = opt, loss=['categorical_crossentropy',contr_loss], metrics=['accuracy'])
+checkpoint1 = callbacks.ModelCheckpoint('/content/drive/MyDrive/COVID/saved models/VGG16/vgg16model_weights.h5', monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
+lr_decay = callbacks.LearningRateScheduler(schedule=lr_scheduler)
+callbacks_list=[checkpoint1,lr_decay]
+#training the modified InceptionV3 network for refining the deep feature embedding
+history =custom_incep_model.fit(train_generator_incep,
+                    epochs=nEpochs,
+                    validation_data=val_generator_incep,
+                    callbacks=callbacks_list)
 
 #Saving features of the training images
 features_train = custom_incep_model.predict_generator(train_generator_incep, predict_size_train)
