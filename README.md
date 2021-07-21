@@ -13,8 +13,7 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 - [Method Overview](#3)
 - [Dataset](#4)
 - [Results](#5)
-- [Dependencies](#6)
-- [Contact](#7)
+- [Contact](#6)
 
 
 
@@ -45,9 +44,9 @@ We have used the [Novel COVID-19 Chestxray Database](https://github.com/subhanka
 | Dataset| COVID-19 |Pneumonia | Normal |
 | ------------- | ------------- | ------------- | -------------|
 | [COVID Chestxray set](https://github.com/ieee8023/covid-chestxray-dataset) | 521 |239|218|
-| [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) | 219 |1341|1345|
+| [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) | 219 |1345|1341|
 | [Actualmed COVID chestxray dataset](https://github.com/agchung/Actualmed-COVID-chestxray-dataset)| 12 |0|80|
-| **Total**|**752**|**584**|**1693**|
+| **Total**|**752**|**584**|**1639**|
 
 
 ## Results<a name="5"></a>
@@ -56,12 +55,15 @@ To implement the proposed method, we have considered Python using Keras package 
 
 
 ### Table 2: Results of 3-class classification<a name="tab2"></a>
-| Classifier/Ensemble | Validation Accuracy(in %) |Test Accuracy(in %) |Precision(Avg)|Recall(Avg)|
-| ------------- | ------------- | ------------- | -------------|-------------|
-| VGG16  | 92.5 |95|0.95|0.95|
-| Xception|89|92.5|0.93|0.92|
-| Inception V3|87|92.5|0.93|0.92|
-|**Ensemble**|**-**|**96.67**|**0.97**|**0.97**|
+| Classifier/Ensemble | Validation Accuracy(in %) |Test Accuracy(in %) |Precision(Avg)|Recall(Avg)|AUC|
+| ------------- | ------------- | ------------- | -------------|-------------|-------------|
+| VGG16  | 96.71 |91.22|0.92|0.92|0.92|0.92
+| Xception|97.02|92.98|0.93|0.93|0.92
+| InceptionV3|97.49|93.48|0.94|0.94|0.94|
+|Choquet Integral (Weight 1)|97.74|94.23|0.94|0.94|-|
+|Choquet Integral (Weight 2)|98.24|94.23|0.94|0.94|-|
+|Choquet Integral (Weight 3)| 97.49|93.73|0.95 |0.95 |-|
+|**Ensemble**|**98.99*|**95.49** |**0.96**|**0.96**|**0.97**|
 
 
 ##  Fig 3:Average  Precision  score  Micro-averaged  over  allclasses for each of the 3 classifiers and the ensemble method<a name="fig3"></a>
@@ -76,12 +78,9 @@ To implement the proposed method, we have considered Python using Keras package 
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/confusion_matrix.PNG" width="350">
 
-## Dependencies<a name="6"></a>
-- [Python3](https://www.python.org/)
-- [Tensorflow](https://www.tensorflow.org/)
-- [Keras](https://keras.io/)
 
-## Contact<a name="7"></a>
+
+## Contact<a name="6"></a>
 
 In case of doubt or further collaboration, feel free to email us ! 😊
 - [Subhankar Sen (subhankarsen2001@gmail.com) ](mailto:subhankarsen2001@gmail.com)
