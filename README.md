@@ -43,7 +43,7 @@ In the present work, we have proposed a lambda fuzzy based ensemble model of DCN
 
 ## Fig 1:<a name="fig1"></a>
 
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/VGG16.png" width="750">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/VGG16_extraction.png" width="750">
 
 ## Fig 2:Flowchart of the proposed method<a name="fig2"></a>
 
@@ -79,17 +79,17 @@ To implement the proposed method, we have considered Python using Keras package 
 |**Ensemble**|**98.99**|**95.49** |**0.96**|**0.96**|**0.97**|
 
 
-##  Fig 3:Average  Precision  score  Micro-averaged  over  allclasses for each of the 3 classifiers and the ensemble method<a name="fig3"></a>
+##  Fig 3:ROC of the 3 DCNN models and proposed ensemble method<a name="fig3"></a>
 
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/PR_curve.png" width="350">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/roc.png" width="350">
 
-##  Fig 4:Multi-labelled Precision Recall curve of the proposed ensemble method<a name="fig4"></a>
+##  Fig 4:Multi-labelled ROC curve of the proposed ensemble method<a name="fig4"></a>
 
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/PR_multiclass.PNG" width="350">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/multiclass_roc.png" width="350">
 
 ##  Fig 5:Confusion Matrix of the proposed method<a name="fig5"></a>
 
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/confusion_matrix.PNG" width="350">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/confmatrix.png" width="350">
 
 
 
