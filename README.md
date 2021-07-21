@@ -63,7 +63,7 @@ To implement the proposed method, we have considered Python using Keras package 
 |Choquet Integral (Weight 1)|97.74|94.23|0.94|0.94|-|
 |Choquet Integral (Weight 2)|98.24|94.23|0.94|0.94|-|
 |Choquet Integral (Weight 3)| 97.49|93.73|0.95 |0.95 |-|
-|**Ensemble**|**98.99*|**95.49** |**0.96**|**0.96**|**0.97**|
+|**Ensemble**|**98.99**|**95.49** |**0.96**|**0.96**|**0.97**|
 
 
 ##  Fig 3:Average  Precision  score  Micro-averaged  over  allclasses for each of the 3 classifiers and the ensemble method<a name="fig3"></a>
