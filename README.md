@@ -40,6 +40,16 @@ git clone https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy
 pip install -r requirements.txt
 ```
 
+## Dependencies
+Our project is built using Python 3.8.6 and the following packages 
+```
+numpy==1.19.5
+pandas==1.1.5
+matplotlib==3.2.2
+seaborn==2.5.0
+opencv-python==4.1.2
+tensorflow==2.5.0
+```
 ## Method Overview<a name="3"></a>
 In the present work, we have proposed a lambda fuzzy based ensemble model of DCNN architectures for screening of COVID-19 from CXR images. At first, the CXR images have been preprocessed. Then fine-tuned, well-established DCNN architectures, pretrained over the [ImageNet dataset](http://www.image-net.org/) namely VGG16, Xception and InceptionV3 have been used for feature extraction.In [Fig. 1](#fig1) VGG16  has been  used  for  extraction  of  discriminating  features  from  theinput  CXR  images.These image descriptors are then fed as input into an Multi-layer Perceptron (MLP) classifier with softmax output for 3-class classification problem (COVID-19, Pneumonia and Normal). The confidence scores obtained per image, across the three DCNN models used, are then combined using Choquet integral into a confidence matrix. The fuzzy measures required for the evaluation of the Choquet integral and the Choquet integral itself are calculated as follows.We calculate the Shapley values, using coalition game theory and information theory, which become the fuzzy measures of the single classifier set. We introduce three different weighting schemes to calculate the Shapley values better. We then use lambda fuzzy to calculate the fuzzy measures of the other subsets of classifiers whose cardinality is greater than 1, and then use Choquet integral for aggregation.  Three aggregations done with respect to the three weighting schemes are combined at the end.[Fig. 2](#fig2) demonstrates the flowchart of our proposed methodology.
 
@@ -65,9 +75,6 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 
 
 ## Results<a name="5"></a>
-To implement the proposed method, we have considered Python using Keras package with Tensorflow used as the deep learning framework backend and run on Google Colaboratory having the following system specifications: Nvidia Tesla T4 with 13 GB GPU memory, 1.59GHz GPU Memory Clock and 12.72 GB RAM.We have performed 3-class classification of the CXR images which are COVID-19 affected lungs, Pneumonia affected lungs and Normal lungs. We have used three pretrained models, namely, VGG16, Xception and InceptionV3, and then ensembled the decision of the three models using Choquet Integral. The fuzzy measures are calculated using Coalition game theory and Lambda fuzzy approximation. The parameters used for training the deep learning models are as follows. Adam optimizer, with a learning rate of 0.001 and hyperparameters beta_1 and beta_2 set equal to 0.6 and 0.8 respectively, are used for training the MLP classifier using the extracted image descriptors. The learning rate and hyperparameter values are experimentally inferred to be the most optimal values obtained using Grid search technique for model tuning and optimization. The batch size is set to 32, and the models are trained for 1000 epochs. Weights are initialized from the weights obtained by training ImageNet dataset for all DCNNs.In [Table 2](#tab2), we have recorded the validation accuracy, test accuracy, precision and recall of each of the three models, and the final results obtained after applying the ensemble method.In [Fig. 3](#fig3), we plot ROC of the 3 DCNN models and proposed ensemble method..In[Fig. 4](#fig4) we plot the multi-labeled ROC curve for the proposed ensemble method. In [Fig. 5](#fig5) we plot the Confusion Matrix for the proposed ensemble method.
-
-
 
 ### Table 2: Results of 3-class classification<a name="tab2"></a>
 | Classifier/Ensemble | Validation Accuracy(in %) |Test Accuracy(in %) |Precision(Avg)|Recall(Avg)|AUC|
