@@ -61,7 +61,7 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 | [COVID Chestxray set](https://github.com/ieee8023/covid-chestxray-dataset) | 521 |239|218|
 | [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database) | 219 |1345|1341|
 | [Actualmed COVID chestxray dataset](https://github.com/agchung/Actualmed-COVID-chestxray-dataset)| 12 |0|80|
-| **Total**|**752**|**584**|**1639**|
+| **Total**|**752**|**1584**|**1639**|
 
 
 ## Results<a name="5"></a>
