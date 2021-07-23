@@ -51,13 +51,7 @@ opencv-python==4.1.2
 tensorflow==2.5.0
 ```
 ## Method Overview<a name="3"></a>
-In the present work, we have proposed a lambda fuzzy based ensemble model of DCNN architectures for screening of COVID-19 from CXR images. At first, the CXR images have been preprocessed. Then fine-tuned, well-established DCNN architectures, pretrained over the [ImageNet dataset](http://www.image-net.org/) namely VGG16, Xception and InceptionV3 have been used for feature extraction.In [Fig. 1](#fig1) VGG16  has been  used  for  extraction  of  discriminating  features  from  theinput  CXR  images.These image descriptors are then fed as input into an Multi-layer Perceptron (MLP) classifier with softmax output for 3-class classification problem (COVID-19, Pneumonia and Normal). The confidence scores obtained per image, across the three DCNN models used, are then combined using Choquet integral into a confidence matrix. The fuzzy measures required for the evaluation of the Choquet integral and the Choquet integral itself are calculated as follows.We calculate the Shapley values, using coalition game theory and information theory, which become the fuzzy measures of the single classifier set. We introduce three different weighting schemes to calculate the Shapley values better. We then use lambda fuzzy to calculate the fuzzy measures of the other subsets of classifiers whose cardinality is greater than 1, and then use Choquet integral for aggregation.  Three aggregations done with respect to the three weighting schemes are combined at the end.[Fig. 2](#fig2) demonstrates the flowchart of our proposed methodology.
-
-## Fig 1:<a name="fig1"></a>
-
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/VGG16_extraction.png" width="750">
-
-## Fig 2:Flowchart of the proposed method<a name="fig2"></a>
+## Fig 1:Flowchart of the proposed method<a name="fig2"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/Covid-19%20flowchart.png" width="500">
 
@@ -88,15 +82,15 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 |**Ensemble**|**98.99**|**95.49** |**0.96**|**0.96**|**0.97**|
 
 
-##  Fig 3:ROC of the 3 DCNN models and proposed ensemble method<a name="fig3"></a>
+##  Fig 2:ROC of the 3 DCNN models and proposed ensemble method<a name="fig3"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/roc.png" width="350">
 
-##  Fig 4:Multi-labelled ROC curve of the proposed ensemble method<a name="fig4"></a>
+##  Fig 3:Multi-labelled ROC curve of the proposed ensemble method<a name="fig4"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/multiclass_roc.png" width="350">
 
-##  Fig 5:Confusion Matrix of the proposed method<a name="fig5"></a>
+##  Fig 4:Confusion Matrix of the proposed method<a name="fig5"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/confmatrix.png" width="350">
 
