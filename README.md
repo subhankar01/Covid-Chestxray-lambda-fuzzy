@@ -9,7 +9,7 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 ## Table of Contents
 
 - [Team Members](#1)
-- [Reference Paper](#2)
+- [Journal Paper](#2)
 - [Method Overview](#3)
 - [Dataset](#4)
 - [Results](#5)
