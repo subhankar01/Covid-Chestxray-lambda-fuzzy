@@ -10,10 +10,12 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 
 - [Team Members](#1)
 - [Journal Paper](#2)
-- [Method Overview](#3)
-- [Dataset](#4)
-- [Results](#5)
-- [Contact](#6)
+- [Installation](#3)
+- [Dependencies](#4)
+- [Method Overview](#5)
+- [Dataset](#6)
+- [Results](#7)
+- [Contact](#8)
 
 
 
@@ -29,7 +31,7 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 If you find this work useful for your publications, please consider citing:
 ```
 ```
-## Installation
+## Installation<a name="3"></a>
 1. Make sure you have python3 setup on your system
 2. Clone the repo
 ```
@@ -40,7 +42,7 @@ git clone https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy
 pip install -r requirements.txt
 ```
 
-## Dependencies
+## Dependencies<a name="4"></a>
 Our project is built using Python 3.8.6 and the following packages 
 ```
 numpy==1.19.5
@@ -50,12 +52,12 @@ seaborn==2.5.0
 opencv-python==4.1.2
 tensorflow==2.5.0
 ```
-## Method Overview<a name="3"></a>
+## Method Overview<a name="5"></a>
 ## Fig 1:Flowchart of the proposed method<a name="fig2"></a>
 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/Covid-19%20flowchart.png" width="500">
 
-## Dataset<a name="4"></a>
+## Dataset<a name="6"></a>
 We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx dataset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  is provided  in [Table 1](#tab1)
 
 ### Table 1: Dataset Description<a name="tab1"></a>
@@ -68,7 +70,7 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 | **Total**|**752**|**1584**|**1639**|
 
 
-## Results<a name="5"></a>
+## Results<a name="7"></a>
 
 ### Table 2: Results of 3-class classification<a name="tab2"></a>
 | Classifier/Ensemble | Validation Accuracy(in %) |Test Accuracy(in %) |Precision(Avg)|Recall(Avg)|AUC|
@@ -96,7 +98,7 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 
 
 
-## Contact<a name="6"></a>
+## Contact<a name="8"></a>
 
 In case of doubt or further collaboration, feel free to email us ! 😊
 - [Subhankar Sen (subhankarsen2001@gmail.com) ](mailto:subhankarsen2001@gmail.com)
