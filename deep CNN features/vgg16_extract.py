@@ -109,8 +109,8 @@ x1= layers.GlobalAveragePooling2D()(model.get_layer("block2_conv2").output)
 x2= layers.GlobalAveragePooling2D()(model.get_layer("block3_conv3").output)
 x3 = layers.GlobalAveragePooling2D()(model.get_layer("block4_conv3").output)  
 x4 = layers.GlobalAveragePooling2D()(model.get_layer("block5_conv3").output)  
-out= layers.Concatenate()([x1,x2,x3,x4])
-out=layers.Dense(512,activation='relu')(out)
+img_embed= layers.Concatenate()([x1,x2,x3,x4])
+out=layers.Dense(512,activation='relu')(img_embed)
 out=layers.Dropout(0.5)(out)
 out=layers.Dense(3,activation='softmax',name= 'output')(out)
 custom_vgg16_model = models.Model(image_input , out)
@@ -133,14 +133,16 @@ history =custom_vgg16_model.fit(train_generator_vgg16,
                     validation_data=val_generator_vgg16,
                     callbacks=callbacks_list)
 
+bottleneck= tf.keras.Model(inputs=custom_vgg16_model.input, outputs=custom_vgg16_model.layers[22].output)
+
 #Saving features of the training images
-features_train = custom_vgg16_model.predict_generator(train_generator_vgg16, predict_size_train)
+features_train = bottleneck.predict_generator(train_generator_vgg16, predict_size_train)
 np.save(extracted_features_dir+model_name+'_train_features.npy', features_train)
 
 # Saving features of the validation images
-features_validation = custom_vgg16_model.predict_generator(val_generator_vgg16, predict_size_validation)
+features_validation = bottleneck.predict_generator(val_generator_vgg16, predict_size_validation)
 np.save(extracted_features_dir+model_name+'_val_features.npy', features_validation)
 
 # Saving features of the test images
-features_test = custom_vgg16_model.predict_generator(test_generator_vgg16, predict_size_test)
+features_test = bottleneck.predict_generator(test_generator_vgg16, predict_size_test)
 np.save(extracted_features_dir+model_name+'_test_features.npy', features_test)
