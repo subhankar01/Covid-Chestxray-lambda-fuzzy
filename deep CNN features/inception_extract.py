@@ -141,15 +141,15 @@ history =custom_incep_model.fit(train_generator_incep,
                     epochs=nEpochs,
                     validation_data=val_generator_incep,
                     callbacks=callbacks_list)
-
+bottleneck= tf.keras.Model(inputs=custom_incep_model.input, outputs=custom_incep_model.layers[294].output)
 #Saving features of the training images
-features_train = custom_incep_model.predict_generator(train_generator_incep, predict_size_train)
+features_train = bottleneck.predict_generator(train_generator_incep, predict_size_train)
 np.save(extracted_features_dir+model_name+'_train_features.npy', features_train)
 
 # Saving features of the validation images
-features_validation = custom_incep_model.predict_generator(val_generator_incep, predict_size_validation)
+features_validation = bottleneck.predict_generator(val_generator_incep, predict_size_validation)
 np.save(extracted_features_dir+model_name+'_val_features.npy', features_validation)
 
 # Saving features of the test images
-features_test = custom_incep_model.predict_generator(test_generator_incep, predict_size_test)
+features_test = vbottleneck.predict_generator(test_generator_incep, predict_size_test)
 np.save(extracted_features_dir+model_name+'_test_features.npy', features_test)
