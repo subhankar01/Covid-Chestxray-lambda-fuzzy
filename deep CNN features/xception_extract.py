@@ -127,15 +127,15 @@ history =custom_xcep_model.fit(train_generator_xcep,
                     epochs=nEpochs,
                     validation_data=val_generator_xcep,
                     callbacks=callbacks_list)
-
+bottleneck= tf.keras.Model(inputs=custom_xcep_model.input, outputs=custom_xcep_model.layers[130].output)
 #Saving features of the training images
-features_train = custom_xcep_model.predict_generator(train_generator_xcep, predict_size_train)
+features_train =bottleneck.predict_generator(train_generator_xcep, predict_size_train)
 np.save(extracted_features_dir+model_name+'_train_features.npy', features_train)
 
 # Saving features of the validation images
-features_validation = custom_xcep_model.predict_generator(val_generator_xcep, predict_size_validation)
+features_validation =bottleneck.predict_generator(val_generator_xcep, predict_size_validation)
 np.save(extracted_features_dir+model_name+'_val_features.npy', features_validation)
 
 # Saving features of the test images
-features_test = custom_xcep_model.predict_generator(test_generator_xcep, predict_size_test)
+features_test = bottleneck.predict_generator(test_generator_xcep, predict_size_test)
 np.save(extracted_features_dir+model_name+'_test_features.npy', features_test)
