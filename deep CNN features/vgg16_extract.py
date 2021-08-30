@@ -143,6 +143,6 @@ np.save(extracted_features_dir+model_name+'_train_features.npy', features_train)
 features_validation = bottleneck.predict_generator(val_generator_vgg16, predict_size_validation)
 np.save(extracted_features_dir+model_name+'_val_features.npy', features_validation)
 
-# Saving features of the test images
+# Saving features of the test image
 features_test = bottleneck.predict_generator(test_generator_vgg16, predict_size_test)
 np.save(extracted_features_dir+model_name+'_test_features.npy', features_test)
