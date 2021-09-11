@@ -30,7 +30,16 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 ## Journal Paper<a name="2"></a>
 If you find this work useful for your publications, please consider citing:
 ```
-```
+@ARTICLE{9534669,
+  author={Bhowal, Pratik and Sen, Subhankar and Yoon, Jin Hee and Geem, Zong Woo and Sarkar, Ram},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={Choquet Integral and Coalition Game-based Ensemble of Deep Learning Models for COVID-19 Screening from Chest X-ray Images}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/JBHI.2021.3111415}}
+  ```
 ## Installation<a name="3"></a>
 1. Make sure you have python3 setup on your system
 2. Clone the repo
