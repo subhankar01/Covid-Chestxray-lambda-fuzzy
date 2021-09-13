@@ -1,4 +1,4 @@
-# Covid-Chestxray-lambda-fuzzy
+# Covid-Chestxray-lambda-fuzzy [[PAPER]](https://ieeexplore.ieee.org/document/9534669)
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/covid_poster.gif" width="1000" height="500" />
 
 Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository)
