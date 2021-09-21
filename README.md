@@ -109,6 +109,5 @@ We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/su
 
 In case of doubt or further collaboration, feel free to email us ! 😊
 - [Subhankar Sen (subhankarsen2001@gmail.com) ](mailto:subhankarsen2001@gmail.com)
-- [Pratik Bhowal (pratikbhowal1999@gmail.com)](mailto:pratikbhowal1999@gmail.com)
 
 
