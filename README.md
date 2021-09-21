@@ -1,7 +1,7 @@
-# Covid-Chestxray-lambda-fuzzy [[PAPER]](https://ieeexplore.ieee.org/document/9534669)
+# Covid-Chestxray-lambda-fuzzy 
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/covid_poster.gif" width="1000" height="500" />
 
-Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository) and [COVIDx](https://www.nature.com/articles/s41598-020-76550-z)
+Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository) and [COVIDx](https://www.nature.com/articles/s41598-020-76550-z) [[PAPER]](https://ieeexplore.ieee.org/document/9534669)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/choquet-integral-and-coalition-game-based/covid-19-diagnosis-on-covidx)](https://paperswithcode.com/sota/covid-19-diagnosis-on-covidx?p=choquet-integral-and-coalition-game-based)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/choquet-integral-and-coalition-game-based/covid-19-diagnosis-on-novel-covid-19)](https://paperswithcode.com/sota/covid-19-diagnosis-on-novel-covid-19?p=choquet-integral-and-coalition-game-based)
