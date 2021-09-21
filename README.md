@@ -1,7 +1,10 @@
 # Covid-Chestxray-lambda-fuzzy [[PAPER]](https://ieeexplore.ieee.org/document/9534669)
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/covid_poster.gif" width="1000" height="500" />
 
-Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository)
+Our solution for [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository) and [COVIDx](https://www.nature.com/articles/s41598-020-76550-z)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/choquet-integral-and-coalition-game-based/covid-19-diagnosis-on-covidx)](https://paperswithcode.com/sota/covid-19-diagnosis-on-covidx?p=choquet-integral-and-coalition-game-based)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/choquet-integral-and-coalition-game-based/covid-19-diagnosis-on-novel-covid-19)](https://paperswithcode.com/sota/covid-19-diagnosis-on-novel-covid-19?p=choquet-integral-and-coalition-game-based)
 
 In this project, we have applied Choquet integral for ensemble of deep CNN models and propose a novel method for the evaluation of fuzzy measures using Coalition Game Theory, Information Theory and Lambda fuzzy approximation. Three different sets of Fuzzy Measures are calculated using three different weighting schemes along with information theory and coalition game theory. Using these three sets of fuzzy measures three Choquet Integrals are calculated and their decisions are finally combined.To the best of our knowledge,our experimental results outperform many state-of-the-art methods.
 
