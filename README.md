@@ -63,8 +63,6 @@ opencv-python==4.1.2
 tensorflow==2.5.0
 ```
 ## Method Overview<a name="5"></a>
-## Fig 1:Flowchart of the proposed method<a name="fig2"></a>
-
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/JBHI%20visual%20abstract.png" width="1000">
 
 ## Dataset<a name="6"></a>
