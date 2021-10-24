@@ -64,7 +64,7 @@ tensorflow==2.5.0
 ```
 ## Method Overview<a name="5"></a>
 Note : view using github light mode for better clarity ! 
-<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/JBHI%20visual%20abstract.png" width="1000">
+<img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/visual_abstract.png" width="1000">
 
 ## Dataset<a name="6"></a>
 We have used the [Novel COVID-19 Chestxray Repository](https://www.kaggle.com/subhankarsen/novel-covid19-chestxray-repository) for evaluation of our proposed methodology. We have also used our code to show our method performance over the popular [COVIDx dataset](https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md). Information  about  the  Novel  COVID-19  Chestxray  Database  and  its  parent  image  repositories  is provided  in [Table 1](#tab1)
