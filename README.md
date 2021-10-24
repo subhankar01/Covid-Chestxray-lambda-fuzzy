@@ -59,8 +59,8 @@ numpy==1.19.5
 pandas==1.1.5
 matplotlib==3.2.2
 seaborn==2.5.0
-opencv-python==4.1.2
-tensorflow==2.5.0
+opencv-python==4.2.0.32
+tensorflow==2.5.1
 ```
 ## Method Overview<a name="5"></a>
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/visual_abstract.png" width="1000">
