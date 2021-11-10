@@ -23,11 +23,11 @@ In this project, we have applied Choquet integral for ensemble of deep CNN model
 
 
 ## Team Members<a name="1"></a>
-- Subhankar Sen  [LinkedIn](https://www.linkedin.com/in/subhankar-sen-a62457190lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BP2gUaNhAT0uL2etYJDiGqw%3D%3D) 
-- Pratik Bhowal  [LinkedIn](https://www.linkedin.com/in/pratik-bhowal-1066aa198?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BqgwqwxJRIep5K454MTQ6w%3D%3D),[Github](https://github.com/prat1999)
-- Prof. Jin Hee Yoon, faculty of the Dept. of Mathematics and Statistics at Sejong University, Seoul, South Korea [LinkedIn](https://www.linkedin.com/in/jin-hee-yoon-2418a069), [Google Scholar](https://scholar.google.com/citations?user=Rq_TQc0AAAAJ&hl=en)
-- Prof. Zong Woo Geem, faculty of College of IT Convergence at Gachon University, South Korea [LinkedIn](https://www.linkedin.com/in/zong-woo-geem-66273113), [Google Scholar](https://scholar.google.com/citations?hl=en&user=Je3-B2YAAAAJ)
-- Prof. Ram Sarkar,  Professor at Dept. of Computer Science Engineering, Jadavpur Univeristy Kolkata, India [LinkedIn](https://www.linkedin.com/in/ram-sarkar-0ba8a758?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BvwKX%2Frm5RNSySsSaIQTiVQ%3D%3D)    , [Google Scholar](https://scholar.google.com/citations?hl=en&user=bDj0BUEAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=subhankarsen2001%40gmail.com&gmla=AJsN-F5CKj5MB0jIcLJssFUKVVcxdf5jt8CBMbzSZf6W9RJvYUYp61X3OC6sXa_lzg1FHW7A8BpuLWwkMtDLWxJje2eowsNWqllMazckf90f5PsxhFZ2D1PcmhyhjJ8OT5q2-3Pc3DcwNuIj4E0s2LfWgQVOZBVVGs76xTjTPWNSKVvqBhvA-u05tkPXamKiItj8RSd_vApWN6jtmvYA9JcJ4ObPprLRFPV10T5a0A4nmrQVxyniapy6XIgng1L8D1qTtb2oFAow)
+- Subhankar Sen
+- Pratik Bhowal [Github](https://github.com/prat1999)
+- Prof. Jin Hee Yoon, faculty of the Dept. of Mathematics and Statistics at Sejong University, Seoul, South Korea [Google Scholar](https://scholar.google.com/citations?user=Rq_TQc0AAAAJ&hl=en)
+- Prof. Zong Woo Geem, faculty of College of IT Convergence at Gachon University, South Korea [Google Scholar](https://scholar.google.com/citations?hl=en&user=Je3-B2YAAAAJ)
+- Prof. Ram Sarkar,  Professor at Dept. of Computer Science Engineering, Jadavpur Univeristy Kolkata, India [Google Scholar](https://scholar.google.com/citations?hl=en&user=bDj0BUEAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=subhankarsen2001%40gmail.com&gmla=AJsN-F5CKj5MB0jIcLJssFUKVVcxdf5jt8CBMbzSZf6W9RJvYUYp61X3OC6sXa_lzg1FHW7A8BpuLWwkMtDLWxJje2eowsNWqllMazckf90f5PsxhFZ2D1PcmhyhjJ8OT5q2-3Pc3DcwNuIj4E0s2LfWgQVOZBVVGs76xTjTPWNSKVvqBhvA-u05tkPXamKiItj8RSd_vApWN6jtmvYA9JcJ4ObPprLRFPV10T5a0A4nmrQVxyniapy6XIgng1L8D1qTtb2oFAow)
 
 
 ## Journal Paper<a name="2"></a>
