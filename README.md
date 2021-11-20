@@ -84,6 +84,7 @@ tensorflow==2.5.1
 |   +-- driver.ipynb
 
 ```
+Please note that the image labels are generated and stored in the ```labels``` folder on execution of  ```incep_extract.py``` script.
 ## Method Overview<a name="6"></a>
 <img src="https://github.com/subhankar01/Covid-Chestxray-lambda-fuzzy/blob/main/assets/visual_abstract.png" width="1000">
 
