@@ -76,9 +76,9 @@ tensorflow==2.5.1
 |   |  +-- test_labels.npy
 |   +-- augment.py
 |   +-- deep CNN features (feature extraction scripts)
-|      +-- incep_extract.py
-|      +-- xcep_extract.py
-|      +-- vgg16_extract.py
+|   |  +-- incep_extract.py
+|   |  +-- xcep_extract.py
+|   |  +-- vgg16_extract.py
 |   +-- classifier.py
 |   +-- lambda_fuzzy_script.py
 |   +-- driver.ipynb
