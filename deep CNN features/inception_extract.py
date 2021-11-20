@@ -39,6 +39,7 @@ for sub_folder in os.listdir(test_dir):
 print("Total no. of Chest Xray test images=",total)
 
 extracted_features_dir="COVID_Xray/extracted_features/"
+labels="COVID_Xray/labels/"
 
 img_height =512
 img_width =512
@@ -93,6 +94,7 @@ predict_size_validation = int(math.ceil(nb_validation_samples / batch_size))
 
 nb_test_samples = len(test_generator_incep.filenames)
 predict_size_test = int(math.ceil(nb_test_samples / batch_size))
+
 
 model_name="InceptionV3"
 model = InceptionV3(include_top=False, weights="imagenet",pooling='avg',input_shape=input_shape)
@@ -151,5 +153,19 @@ features_validation = bottleneck.predict_generator(val_generator_incep, predict_
 np.save(extracted_features_dir+model_name+'_val_features.npy', features_validation)
 
 # Saving features of the test images
-features_test = vbottleneck.predict_generator(test_generator_incep, predict_size_test)
+features_test = bottleneck.predict_generator(test_generator_incep, predict_size_test)
 np.save(extracted_features_dir+model_name+'_test_features.npy', features_test)
+
+train_labels=train_generator_incep.classes
+train_labels = utils.to_categorical(train_labels, num_classes=3)
+validation_labels=val_generator_incep.classes
+validation_labels = utils.to_categorical(validation_labels, num_classes=3)
+test_labels=test_generator_incep.classes
+test_labels=utils.to_categorical(test_labels,num_classes=3)
+
+#Saving the image labels
+np.save(labels+"train_labels.npy", train_labels)
+np.save(labels+"val_labels.npy", val_labels)
+np.save(labels+"test_labels.npy", test_labels)
+
+
