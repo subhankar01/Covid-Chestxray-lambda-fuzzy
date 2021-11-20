@@ -67,8 +67,8 @@ tensorflow==2.5.1
 ```
 +-- COVID_Xray
 |   +-- covid xray dataset
-|       +-- training set
-|       +-- test set
+|   |   +-- training set
+|   |   +-- test set
 |   +-- extracted features
 |   +-- labels
 |   |  +-- train_labels.npy
